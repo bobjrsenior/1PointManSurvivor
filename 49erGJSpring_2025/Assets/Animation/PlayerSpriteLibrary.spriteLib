@@ -43,8 +43,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -432127847948664643, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -432127847948664643, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
+    - m_Name: Walk3
+      m_Hash: 933205406
+      m_Sprite: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638776718026073690
+  m_ModificationHash: 638776780043118489
   m_Version: 1
