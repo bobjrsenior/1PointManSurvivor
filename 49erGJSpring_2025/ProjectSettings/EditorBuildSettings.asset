@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: b925354872e1b8f30af1ff50fbec5412
   - enabled: 1
+    path: Assets/Scenes/Truck_FMV.unity
+    guid: 88cf41b29209f684d8883f72c802f231
+  - enabled: 1
+    path: Assets/Scenes/God_pt1.unity
+    guid: 6487b90dcee897d469dcfa3dc389ea12
+  - enabled: 1
+    path: Assets/Scenes/God_pt2 1.unity
+    guid: 43cc345b49b7b1a4c8d9583e544281a6
+  - enabled: 1
+    path: Assets/Scenes/God_pt2.unity
+    guid: ce62fade9819a7b45a91d3a7450f040c
+  - enabled: 1
     path: Assets/Scenes/HandGrenadeScene.unity
     guid: 807625c995f869eb1b2c9c939c38d17a
   - enabled: 1
