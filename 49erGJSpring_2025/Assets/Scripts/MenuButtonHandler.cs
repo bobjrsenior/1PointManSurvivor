@@ -20,6 +20,6 @@ public class MenuButtonHandler : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(7);
     }
 }
