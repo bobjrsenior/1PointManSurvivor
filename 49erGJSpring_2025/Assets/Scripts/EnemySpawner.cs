@@ -30,6 +30,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (ScoreHandler.instance.runTimer)
             {
+                int type = random.Next(0, enemies.Count);
                 //select edge
                 //place on random point on edge
                 int side = random.Next(0, 4);
