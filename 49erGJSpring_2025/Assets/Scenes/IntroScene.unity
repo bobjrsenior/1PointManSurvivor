@@ -374,16 +374,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentIndex: 0
   audioClips:
+  - {fileID: 8300000, guid: d199353ec50af5c1d9e80b74b412fdde, type: 3}
+  - {fileID: 8300000, guid: e61d83c02cdede825a2fe7f8a6bd98c8, type: 3}
+  - {fileID: 8300000, guid: 049c070fe89ab6d03b317216b07b8aac, type: 3}
   - {fileID: 8300000, guid: de7c11777e7a205bf9b864a27cb09344, type: 3}
-  - {fileID: 8300000, guid: de7c11777e7a205bf9b864a27cb09344, type: 3}
-  - {fileID: 8300000, guid: de7c11777e7a205bf9b864a27cb09344, type: 3}
-  - {fileID: 8300000, guid: de7c11777e7a205bf9b864a27cb09344, type: 3}
-  - {fileID: 8300000, guid: de7c11777e7a205bf9b864a27cb09344, type: 3}
+  - {fileID: 8300000, guid: 3f312cb7858542fdb83ca3ab05c064b9, type: 3}
+  - {fileID: 8300000, guid: 438d0f645dea4310c8b93a979dd433bb, type: 3}
   backgroundSprites:
   - {fileID: -8946491361197574891, guid: fcdd31dee82e76c9480906281dfb11ef, type: 3}
   - {fileID: -4223690297337741970, guid: 978ff9d86d80f4e2ba95d28a8c491bbd, type: 3}
   - {fileID: -5083169998518350108, guid: 7f3ef99aaa740cff8bdb6ed38d976aa6, type: 3}
   - {fileID: -6394198365981925131, guid: 02fa07c33124071c8ba2579c772e4409, type: 3}
+  - {fileID: 6000544838645893610, guid: 0f654f92709e7da6f8a239a00f6237db, type: 3}
   - {fileID: 6000544838645893610, guid: 0f654f92709e7da6f8a239a00f6237db, type: 3}
   audioSource: {fileID: 519420034}
   backgroundImage: {fileID: 1552366952}
