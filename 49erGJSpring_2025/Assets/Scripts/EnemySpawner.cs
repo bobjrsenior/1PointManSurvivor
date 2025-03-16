@@ -4,7 +4,6 @@ using UnityEngine;
 using Random = System.Random;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -20,13 +19,17 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(ContinuousSpawnEnemy());
     }
 
+    public void Init()
+    {
+        spawnSpeed = 2;
+    }
+
     IEnumerator ContinuousSpawnEnemy()
     {
         while (true)
         {
             if (ScoreHandler.instance.runTimer)
             {
-                Instantiate(enemies[0]);
                 //select edge
                 //place on random point on edge
                 int side = random.Next(0, 3);
@@ -55,8 +58,10 @@ public class EnemySpawner : MonoBehaviour
                 }
                 GameObject enemy = Instantiate(enemies[0]);
                 enemy.transform.position = new Vector3(xPos, yPos, 0);
+                enemy.GetComponent<BasicEnemyController>().movementSpeed = 1.0f + (ScoreHandler.instance.timeSurvived / 50.0f);
+
             }
-            yield return new WaitForSeconds(spawnSpeed);
+            yield return new WaitForSeconds(spawnSpeed - (Time.deltaTime / 450));
         }
     }
 }
