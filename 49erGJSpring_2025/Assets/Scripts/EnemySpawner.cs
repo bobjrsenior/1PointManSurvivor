@@ -26,10 +26,10 @@ public class EnemySpawner : MonoBehaviour
         {
             if (ScoreHandler.instance.runTimer)
             {
-                Instantiate(enemies[0]);
+                int type = random.Next(0, enemies.Count);
                 //select edge
                 //place on random point on edge
-                int side = random.Next(0, 3);
+                int side = random.Next(0, 4);
                 float point = random.Next(-40, 40);
                 float xPos = 0;
                 float yPos = 0;
@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
                         break;
 
                 }
-                GameObject enemy = Instantiate(enemies[0]);
+                GameObject enemy = Instantiate(enemies[type]);
                 enemy.transform.position = new Vector3(xPos, yPos, 0);
             }
             yield return new WaitForSeconds(spawnSpeed);

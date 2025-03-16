@@ -62,4 +62,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 6442730123177670775, guid: e6494e91757163f51bbacbff2c2b8320, type: 3}
+  - {fileID: 6442730123177670775, guid: e6494e91757163f51bbacbff2c2b8320, type: 3}
+  - {fileID: 6442730123177670775, guid: e6494e91757163f51bbacbff2c2b8320, type: 3}
+  - {fileID: 6442730123177670775, guid: e6494e91757163f51bbacbff2c2b8320, type: 3}
+  - {fileID: 6442730123177670775, guid: 3c83b9c3c5406464aad111ed837fd545, type: 3}
   spawnSpeed: 2
