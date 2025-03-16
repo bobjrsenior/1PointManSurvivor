@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        ScoreHandler.instance.Init();
         ScoreHandler.instance.runTimer = true;
     }
 

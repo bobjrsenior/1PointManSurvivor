@@ -17,4 +17,9 @@ public class MenuButtonHandler : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
