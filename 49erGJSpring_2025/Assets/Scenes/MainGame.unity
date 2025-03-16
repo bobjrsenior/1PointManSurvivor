@@ -341,6 +341,7 @@ MonoBehaviour:
   sprites: []
   animationSpeed: 2
   renderer: {fileID: 0}
+  prev: {fileID: 0}
 --- !u!1001 &4738638618988534625
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702124909723531751}
   - component: {fileID: 7749698447686735437}
+  - component: {fileID: 5545364550338616489}
   m_Layer: 0
   m_Name: ScoreHandler
   m_TagString: Untagged
@@ -47,3 +48,18 @@ MonoBehaviour:
   timeSurvived: 0
   enemiesSlain: 0
   runTimer: 0
+--- !u!114 &5545364550338616489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110992344476102889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c41cc471dc1664fac4a4bbfcd455d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 6442730123177670775, guid: e6494e91757163f51bbacbff2c2b8320, type: 3}
+  spawnSpeed: 2
