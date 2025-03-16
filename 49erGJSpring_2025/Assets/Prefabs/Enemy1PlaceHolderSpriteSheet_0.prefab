@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2827639646860528396}
   - component: {fileID: 4971003328263848622}
   - component: {fileID: 5754772244536629889}
+  - component: {fileID: 5267149757374486697}
   m_Layer: 0
   m_Name: Enemy1PlaceHolderSpriteSheet_0
   m_TagString: Enemy
@@ -177,3 +178,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   playerTransform: {fileID: 0}
+--- !u!114 &5267149757374486697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442730123177670775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4642e8cf46f3f8499bacdd28125ea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1994071357720167194, guid: 4cf3741d1e1bae245b1ed483fae4037d, type: 3}
+  - {fileID: 1427243826851941636, guid: 4cf3741d1e1bae245b1ed483fae4037d, type: 3}
+  - {fileID: -6888987200655105591, guid: 4cf3741d1e1bae245b1ed483fae4037d, type: 3}
+  animationSpeed: 0.25
+  renderer: {fileID: 8676316834965688907}
+  prev: {fileID: -4493892864079316352, guid: 4cf3741d1e1bae245b1ed483fae4037d, type: 3}
