@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, maxPosition.y);
         if(Input.GetKeyDown(KeyCode.Return))
         {
+            ScoreHandler.instance.runTimer = false;
             Instantiate(haloPrefab, transform.position, Quaternion.identity);
         }
     }
