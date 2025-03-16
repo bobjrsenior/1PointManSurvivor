@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D.Animation;
 
 public class PlayerController : MonoBehaviour
@@ -18,12 +19,18 @@ public class PlayerController : MonoBehaviour
     public Sprite walkingSprite;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    public GameObject haloPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        ScoreHandler.instance.runTimer = true;
     }
 
     // Update is called once per frame
@@ -46,6 +53,10 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += (Vector3)(Vector2.up * Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
         }
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            Instantiate(haloPrefab, transform.position, Quaternion.identity);
+        }
     }
 
     void ChangeState(PlayerStates state)
@@ -61,6 +72,23 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.sprite = walkingSprite;
                 animator.SetBool("Walking", true);
                 break;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("Enemy"))
+        {
+            ScoreHandler.instance.runTimer = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag .Equals("Halo"))
+        {
+            Destroy(this.gameObject);
         }
     }
 }
