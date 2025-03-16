@@ -25,12 +25,17 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     public GameObject haloPrefab;
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
+    private AudioSource audioSource;
+    public AudioClip dodgeRollAudioClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -83,6 +88,22 @@ public class PlayerController : MonoBehaviour
                 transform.position += (Vector3)(direction * dodgeRollSpeed * Time.deltaTime);
             }
         }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        if(transform.position.x < minPosition.x)
+            transform.position = new Vector3(minPosition.x, transform.position.y);
+        if(transform.position.x > maxPosition.x)
+            transform.position = new Vector3(maxPosition.x, transform.position.y);
+        if(transform.position.y < minPosition.y)
+            transform.position = new Vector3(transform.position.x, minPosition.y);
+        if(transform.position.y > maxPosition.y)
+            transform.position = new Vector3(transform.position.x, maxPosition.y);
         if(Input.GetKeyDown(KeyCode.Return))
         {
             Instantiate(haloPrefab, transform.position, Quaternion.identity);
@@ -106,11 +127,26 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("DodgeRoll", true);
                 animator.SetBool("Walking", false);
                 dodgeRollTimer = dodgeRollTime;
+                audioSource.clip = dodgeRollAudioClip;
+                audioSource.Play();
                 break;
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag .Equals("Halo"))
+        {
+            Destroy(this.gameObject);
+        }
+        else if (col.gameObject.tag.Equals("Enemy") && curPlayerState != PlayerStates.DODGE_ROLL)
+        {
+            ScoreHandler.instance.runTimer = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag .Equals("Halo"))
         {
