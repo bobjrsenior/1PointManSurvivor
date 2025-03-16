@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
     public PlayerStates curPlayerState = PlayerStates.IDLE;
     public float movementSpeed = 0.0f;
 
+    public float dodgeRollSpeed;
+    public float movementSpeedMultiplier = 1.0f;
+    public float dodgeRollTime;
+    private float dodgeRollTimer;
+
     public Sprite idleSprite;
     public Sprite walkingSprite;
     private SpriteRenderer spriteRenderer;
@@ -36,7 +41,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if(Input.GetButton("Jump"))
+        {
+            Debug.Log("Jump");
+            if(curPlayerState == PlayerStates.IDLE || curPlayerState == PlayerStates.WALKING)
+                ChangeState(PlayerStates.DODGE_ROLL);
+        }
+        else if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             if (curPlayerState == PlayerStates.IDLE)
                 ChangeState(PlayerStates.WALKING);
@@ -45,13 +56,32 @@ public class PlayerController : MonoBehaviour
             if (curPlayerState == PlayerStates.WALKING)
                 ChangeState(PlayerStates.IDLE);
         }
-        if(Input.GetButton("Horizontal"))
-        { 
-            transform.position += (Vector3)(Vector2.right * Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime);
-        }
-        if(Input.GetButton("Vertical"))
+        if(curPlayerState == PlayerStates.WALKING)
         {
-            transform.position += (Vector3)(Vector2.up * Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
+            if(Input.GetButton("Horizontal"))
+            { 
+                transform.position += (Vector3)(Vector2.right * Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime);
+            }
+            if(Input.GetButton("Vertical"))
+            {
+                transform.position += (Vector3)(Vector2.up * Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime);
+            }
+        }
+        else if(curPlayerState == PlayerStates.DODGE_ROLL)
+        {
+            dodgeRollTimer -= Time.deltaTime;
+            if(dodgeRollTimer <= 0.0f)
+            {
+                // Exit Dodge Roll
+                if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+                    ChangeState(PlayerStates.WALKING);
+                else
+                    ChangeState(PlayerStates.IDLE);
+            }
+            else {
+                Vector2 direction = (Vector2.right * Input.GetAxis("Horizontal")) + (Vector2.up * Input.GetAxis("Vertical"));
+                transform.position += (Vector3)(direction * dodgeRollSpeed * Time.deltaTime);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Return))
         {
@@ -65,22 +95,18 @@ public class PlayerController : MonoBehaviour
         switch(state)
         {
             case PlayerStates.IDLE:
-                spriteRenderer.sprite = idleSprite;
+                animator.SetBool("DodgeRoll", false);
                 animator.SetBool("Walking", false);
             break;
             case PlayerStates.WALKING:
-                spriteRenderer.sprite = walkingSprite;
+                animator.SetBool("DodgeRoll", false);
                 animator.SetBool("Walking", true);
                 break;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag.Equals("Enemy"))
-        {
-            ScoreHandler.instance.runTimer = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            case PlayerStates.DODGE_ROLL:
+                animator.SetBool("DodgeRoll", true);
+                animator.SetBool("Walking", false);
+                dodgeRollTimer = dodgeRollTime;
+                break;
         }
     }
 
@@ -89,6 +115,11 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag .Equals("Halo"))
         {
             Destroy(this.gameObject);
+        }
+        else if (col.gameObject.tag.Equals("Enemy") && curPlayerState != PlayerStates.DODGE_ROLL)
+        {
+            ScoreHandler.instance.runTimer = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
