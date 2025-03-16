@@ -14,6 +14,16 @@ public class BasicEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += (playerTransform.position - transform.position).normalized * movementSpeed * Time.deltaTime;
+        if (playerTransform != null)
+            transform.position += (playerTransform.position - transform.position).normalized * movementSpeed * Time.deltaTime;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag .Equals("Halo"))
+        {
+            ScoreHandler.instance.addToSlainCount();
+            Destroy(this.gameObject);
+        }
     }
 }
