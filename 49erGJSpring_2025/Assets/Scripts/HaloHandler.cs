@@ -7,10 +7,19 @@ public class HaloHandler : MonoBehaviour
     public Vector2 initialScale;
     public float explosionTime;
     private float explosionTimer;
+    private AudioSource audioSource;
+    public AudioClip audioClip;
 
     void Awake()
     {
         transform.localScale = initialScale;   
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 
     // Update is called once per frame
