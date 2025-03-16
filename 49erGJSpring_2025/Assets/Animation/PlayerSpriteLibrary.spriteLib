@@ -19,16 +19,21 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Idle_1
       m_Hash: 641084251
-      m_Sprite: {fileID: -8891628587074579534, guid: 01d33af2b554f53899bc01111552320f, type: 3}
+      m_Sprite: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -8891628587074579534, guid: 01d33af2b554f53899bc01111552320f, type: 3}
+      m_SpriteOverride: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
     - m_Name: Idle_2
       m_Hash: 1061124833
-      m_Sprite: {fileID: 542193587821569841, guid: 01d33af2b554f53899bc01111552320f, type: 3}
+      m_Sprite: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 542193587821569841, guid: 01d33af2b554f53899bc01111552320f, type: 3}
+      m_SpriteOverride: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
+    - m_Name: Idle_3
+      m_Hash: 137906807
+      m_Sprite: {fileID: 21300000, guid: 3b4cfa92298ebea4da6a67930342c8f8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3b4cfa92298ebea4da6a67930342c8f8, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: PlayerWalking
     m_Hash: 850413091
     m_CategoryList: []
@@ -40,16 +45,53 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 7707743061856340477, guid: b2122ff04bfde9d99a7148afd84ea894, type: 3}
     - m_Name: Walk2
       m_Hash: 10003720
-      m_Sprite: {fileID: -432127847948664643, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: -432127847948664643, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
-    - m_Name: Walk3
-      m_Hash: 933205406
       m_Sprite: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -7196581775242581567, guid: 4d4ba84d43ea4a358bff32503044dfcc, type: 3}
+    - m_Name: Walk3
+      m_Hash: 933205406
+      m_Sprite: {fileID: 21300000, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: eef6fe7d8d967ecb2ba1606633436b87, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: PlayerDodge
+    m_Hash: 688736885
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Start
+      m_Hash: 515406475
+      m_Sprite: {fileID: 21300000, guid: 7a1107a5e49c7ef46869e644583d6580, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7a1107a5e49c7ef46869e644583d6580, type: 3}
+    - m_Name: Middle
+      m_Hash: 422322169
+      m_Sprite: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
+    - m_Name: Roll
+      m_Hash: 243768816
+      m_Sprite: {fileID: 21300000, guid: 22f2cd3c8999d834cad1a54d93f06d91, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 22f2cd3c8999d834cad1a54d93f06d91, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: PlayerBackflip
+    m_Hash: 549141417
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Half_crouch
+      m_Hash: 835925601
+      m_Sprite: {fileID: 21300000, guid: 3b4cfa92298ebea4da6a67930342c8f8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3b4cfa92298ebea4da6a67930342c8f8, type: 3}
+    - m_Name: Start_jump
+      m_Hash: 391604228
+      m_Sprite: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: be95219ec8842a84f86ca47c309de5fc, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638776780043118489
+  m_ModificationHash: 638777269005943769
   m_Version: 1

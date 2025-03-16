@@ -352,24 +352,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1448348945147347864, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448348945147347864, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448348945147347864, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7707743061856340477, guid: b2122ff04bfde9d99a7148afd84ea894, type: 3}
+      objectReference: {fileID: 21300000, guid: 3b4cfa92298ebea4da6a67930342c8f8, type: 3}
+    - target: {fileID: 1448348945147347864, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4523407601639755396, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_Name
       value: PlayerPlaceHolder_0
       objectReference: {fileID: 0}
     - target: {fileID: 6474871053120310842, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_labelHash
-      value: 1.509148e-23
+      value: 0.74796873
       objectReference: {fileID: 0}
     - target: {fileID: 6474871053120310842, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_SpriteHash
-      value: 512403131
+      value: 899494947
       objectReference: {fileID: 0}
     - target: {fileID: 6474871053120310842, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_CategoryHash
-      value: 0.000000020520991
+      value: 3.798446e-37
       objectReference: {fileID: 0}
     - target: {fileID: 7400468720766294588, guid: 11338e36e5e4a864094fc54e09dab4a6, type: 3}
       propertyPath: m_LocalPosition.x

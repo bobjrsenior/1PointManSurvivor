@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: eef6fe7d8d967ecb2ba1606633436b87
+guid: 22f2cd3c8999d834cad1a54d93f06d91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -432127847948664643
-    second: 02 (Custom)_0
-  - first:
-      213: 4934158836754436486
-    second: 02 (Custom)_1
-  - first:
-      213: -4198682346372031901
-    second: 02 (Custom)_2
+      213: 3889396608656372825
+    second: Crouch_Full_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 02 (Custom)_0
+      name: Crouch_Full_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 64
-        width: 426
-        height: 903
+        x: 273
+        y: 36
+        width: 405
+        height: 528
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db047750306c00af0800000000000000
-      internalID: -432127847948664643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02 (Custom)_1
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 49
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6815a1ad157a97440800000000000000
-      internalID: 4934158836754436486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 02 (Custom)_2
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 30
-        width: 8
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 36a9acbc6a84bb5c0800000000000000
-      internalID: -4198682346372031901
+      spriteID: 9547291db99e9f530800000000000000
+      internalID: 3889396608656372825
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      02 (Custom)_0: -432127847948664643
-      02 (Custom)_1: 4934158836754436486
-      02 (Custom)_2: -4198682346372031901
+      Crouch_Full_0: 3889396608656372825
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
